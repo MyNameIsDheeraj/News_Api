@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin:0;
+    background: #d8d8d8;
+}
+.error{
+    max-width: 500px;
+    height: 80%;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding: 0px 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    
+    
+}
+.error :nth-child(1){
+    color: #ffa100;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 0 8px;
+    margin-top: 2%;
+}
+.error :nth-child(2){
+    font-size: 22px;
+    font-weight: 300;
+    color: rgba(0,0,0,0.6);
+    margin: 0 0 16px;
+}
+.error :nth-child(3){
+    line-height: 140%;
+    margin: 16px 0 24px;
+    font-size: 14px;
+}
+
+header{
+    position: fixed;
+    background-color: #ffffff;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    justify-content: space-between;
+    box-shadow: 0px 3px 10px 0 rgba(87, 86, 86, 0.89);
+}
+/* nav,.inputSearch{
+    display: none;
+} */
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+    
+}
+nav ul li{
+    cursor: pointer;
+}
+nav ul li:hover{
+    color:#cc0000;
+}
+
+.inputSearch,
+form{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    max-width: 300px;
+    
+    border-radius: 35px;
+    overflow: hidden;
+    border: 1.5px solid #cc0000;
+}
+
+.inputSearch  input{
+    width: 100%;
+    height: 100%;
+    padding: 0px 15px;
+    border:none;
+    outline: none;
+    font-size: 16px;
+}
+.inputSearch span{
+    width: 70px;
+    background-color: #cc0000;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color:white;
+    cursor: pointer;
+}
+.inputSearch span:hover{
+    background-color: #ee5151;
+}
+
+.menuBtn{
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menuBtn:hover{
+    background-color: #cc0000;
+    color:#ffffff;
+}
+.desktop{
+    display: none;
+}
+@media all and (min-width:700px) {
+    header{
+        padding: 5px 30px;
+    }
+    .desktop{
+        display: flex;
+    }
+    .menuBtn{
+        display: none;
+    }
+}
+
+
+/***mobile menu ****/
+.mobile{
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    max-width: 700px;
+    background-color:#d8d8d8 ;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: none;
+    z-index: 2;
+    margin-left: -10px;
+}
+.mobile nav,
+.mobile nav ul{
+    flex-direction: column;
+}
+
+.mobile .inputSearch,
+.mobile form{
+    height: 35px;
+    
+}
+
+.hidden{
+    display: none;
+}
+
+@media all and (min-width:700px) {
+ .mobile{
+    display: none;
+ }   
+}
+
+/*css card*/
+main{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 25px;
+    padding: 20px;
+    margin: auto;
+    justify-content: center;
+    padding-top: 90px;
+}
+.card img{
+    /* min-height: 210px;
+    max-height: 210px; */
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    max-width: 400px;
+    box-shadow: 7px 7px 25px 1 px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.card h4,
+.card div{
+    padding: 5px 10px;
+
+}
+.publishbyDate{
+    display: flex;
+    align-items: center;
+    color: #858484;
+}
+.publishbyDate p{
+    margin: 0;
+    font-size: 14px;  
+}
+.publishbyDate span{
+    padding: 0 5px;
+}
+.desc{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    margin: 0;
+}
+.card a{
+    color: inherit;
+    text-decoration: none;
+}
+@media all and (min-width:700px) {
+    main{
+        padding: 90px 0px 20px 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* padding-top: 90px; */
+    }
+    .card h4
+    .card div{
+    padding: 5px 15px;
+    }
+}
+@media all and (max-width:700px) {
+    main{
+        padding: 90px 0px 20px 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 5%;
+    }
+}
+
+
